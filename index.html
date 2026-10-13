@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173c70">
+<title>NyaySathi | आपके अधिकार, आपकी भाषा में</title>
+<style>
+:root{--navy:#173c70;--blue:#2563a6;--pale:#edf5ff;--ink:#172033;--muted:#5c6678;--line:#dce4ef;--bg:#f7f9fc;--white:#fff;--green:#147d55}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(130deg,#173c70,#2563a6);color:white;padding:24px 18px 30px}
+.wrap{max-width:900px;margin:auto}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:48px;height:48px;border-radius:14px;background:#ffffff22;display:grid;place-items:center;font-size:27px}
+h1{font-size:1.55rem;margin:0} .tagline{margin:3px 0 0;color:#e2edff;font-size:.95rem}
+.intro{margin:22px 0 0;font-size:1.05rem;max-width:650px}
+main{padding:18px;max-width:900px;margin:auto}
+.searchbox{background:white;border:1px solid var(--line);padding:12px;border-radius:15px;display:flex;gap:8px;box-shadow:0 5px 18px #193b6510}
+input{font:inherit;min-width:0;flex:1;border:0;outline:0;padding:7px}
+button,.button{font:inherit;border:0;border-radius:10px;background:var(--navy);color:white;padding:10px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+button:focus,a:focus,input:focus{outline:3px solid #8cbcff;outline-offset:2px}
+.section-title{font-size:1.2rem;margin:24px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid var(--line);border-radius:15px;padding:16px;text-align:left;cursor:pointer;color:var(--ink);width:100%;box-shadow:0 3px 12px #193b6508}
+.card .emoji{font-size:25px}.card h3{margin:7px 0 4px;font-size:1.02rem}.card p{margin:0;color:var(--muted);font-size:.91rem}
+.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;margin-top:14px}
+.panel h2{margin:0 0 10px;font-size:1.2rem}.panel h3{font-size:1rem;margin:16px 0 5px}
+.panel ul,.panel ol{padding-left:22px}.panel li{margin:7px 0}
+.linklist a{color:#1557a3;overflow-wrap:anywhere}
+.pill{display:inline-block;background:var(--pale);color:var(--navy);padding:4px 9px;border-radius:999px;font-size:.8rem;font-weight:600}
+.notice{border-left:4px solid #d69a24;background:#fff8e7;padding:12px 14px;border-radius:8px;color:#5c451b;font-size:.9rem;margin-top:16px}
+footer{max-width:900px;margin:auto;padding:5px 18px 30px;color:var(--muted);font-size:.85rem}
+.hidden{display:none}
+.result{padding:12px 0;border-bottom:1px solid var(--line)}.result:last-child{border-bottom:0}
+.back{background:#edf2f8;color:var(--navy);margin-bottom:10px}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:9px}.card{padding:13px}.card h3{font-size:.95rem}.card p{font-size:.83rem}header{padding:20px 16px 24px}main{padding:14px}.searchbox button{padding:9px 11px}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="brand"><div class="logo" aria-hidden="true">⚖️</div><div><h1>NyaySathi</h1><p class="tagline">आपके अधिकार, आपकी भाषा में</p></div></div>
+  <p class="intro">कानूनी जानकारी को आसान हिंदी में समझें और सही आधिकारिक सहायता तक पहुँचने का रास्ता जानें।</p>
+ </div>
+</header>
+<main>
+ <div class="searchbox" role="search">
+  <input id="searchInput" type="search" placeholder="जैसे: ऑनलाइन फ्रॉड, मुफ्त वकील..." aria-label="कानूनी विषय खोजें">
+  <button id="searchBtn">खोजें</button>
+ </div>
+ <section id="home">
+  <h2 class="section-title">आपको किस विषय में मदद चाहिए?</h2>
+  <div class="grid">
+   <button class="card" data-topic="rights"><span class="emoji">📘</span><h3>कानूनी अधिकार</h3><p>कानून को सरल भाषा में समझें</p></button>
+   <button class="card" data-topic="complaint"><span class="emoji">📝</span><h3>शिकायत गाइड</h3><p>शिकायत से पहले की तैयारी</p></button>
+   <button class="card" data-topic="aid"><span class="emoji">🤝</span><h3>मुफ्त कानूनी सहायता</h3><p>आधिकारिक सहायता के रास्ते</p></button>
+   <button class="card" data-topic="cyber"><span class="emoji">🛡️</span><h3>साइबर सुरक्षा</h3><p>ऑनलाइन धोखाधड़ी पर कदम</p></button>
+  </div>
+  <h2 class="section-title">लोकप्रिय जानकारी</h2>
+  <div class="panel linklist">
+   <div class="result"><strong>ऑनलाइन वित्तीय धोखाधड़ी</strong><br><a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener">राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</a> · भारत में साइबर वित्तीय धोखाधड़ी होने पर तुरंत 1930 पर कॉल करने की जानकारी भी देखें।</div>
+   <div class="result"><strong>मुफ्त कानूनी सहायता</strong><br><a href="https://nalsa.gov.in/" target="_blank" rel="noopener">राष्ट्रीय विधिक सेवा प्राधिकरण (NALSA)</a></div>
+   <div class="result"><strong>भारत के कानून पढ़ें</strong><br><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">India Code — सरकारी कानूनों का पोर्टल</a></div>
+  </div>
+ </section>
+ <section id="detail" class="panel hidden" aria-live="polite">
+  <button class="back" id="backBtn">← मुख्य पेज पर जाएँ</button>
+  <div id="detailContent"></div>
+ </section>
+ <section id="searchResults" class="panel hidden" aria-live="polite"></section>
+ <div class="notice"><strong>जरूरी सूचना:</strong> NyaySathi एक शैक्षिक प्रोटोटाइप है, वकील या सरकारी विभाग नहीं। यहाँ दी गई जानकारी सामान्य मार्गदर्शन है, व्यक्तिगत कानूनी सलाह नहीं। कानून/प्रक्रिया बदल सकती है—कार्रवाई से पहले आधिकारिक स्रोत या योग्य वकील से पुष्टि करें। इस डेमो में अपनी निजी जानकारी, OTP, बैंक विवरण या दस्तावेज अपलोड न करें।</div>
+</main>
+<footer>NyaySathi Prototype · संस्करण 0.1 · जानकारी को प्रकाशित करने से पहले आधिकारिक स्रोतों से सत्यापित करें।</footer>
+<script>
+const topics = {
+ rights: {title:"कानूनी अधिकार — शुरुआत कहाँ से करें?", tag:"सामान्य जानकारी", body:`
+ <p>कानूनी समस्या होने पर सबसे पहले समस्या, तारीख, संबंधित व्यक्ति/संस्था और उपलब्ध सबूतों को व्यवस्थित करें। हर मामले में लागू कानून और सही प्रक्रिया अलग हो सकती है।</p>
+ <h3>शुरुआती चेकलिस्ट</h3><ul><li>घटना की तारीख और संक्षिप्त विवरण लिखें।</li><li>संबंधित रसीद, संदेश या पत्र सुरक्षित रखें।</li><li>किसी भी मूल दस्तावेज को बिना रसीद के न दें।</li><li>विशिष्ट मामले में वकील या आधिकारिक कानूनी सहायता से सलाह लें।</li></ul>
+ <p class="linklist"><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">India Code पर कानून देखें ↗</a></p>`},
+ complaint: {title:"शिकायत करने से पहले", tag:"चेकलिस्ट", body:`
+ <ol><li>समस्या को तारीख और क्रम के अनुसार लिखें।</li><li>उपलब्ध सबूतों की कॉपी रखें और मूल सुरक्षित रखें।</li><li>सही विभाग/पोर्टल की पहचान सरकारी वेबसाइट से करें।</li><li>शिकायत जमा करने के बाद रसीद या संदर्भ संख्या सुरक्षित रखें।</li><li>अगर मामला तत्काल खतरे, हिंसा या आपात स्थिति से जुड़ा है, तो स्थानीय आपात सेवा से संपर्क करें।</li></ol>
+ <p>यह सामान्य चेकलिस्ट है; हर शिकायत में यही प्रक्रिया लागू नहीं होती।</p>`},
+ aid: {title:"मुफ्त कानूनी सहायता", tag:"आधिकारिक स्रोत", body:`
+ <p>भारत में पात्र लोगों को कानूनी सेवा प्राधिकरणों के माध्यम से मुफ्त कानूनी सहायता मिल सकती है। पात्रता और आवेदन की प्रक्रिया की पुष्टि आधिकारिक स्रोत से करें।</p>
+ <ul><li><a href="https://nalsa.gov.in/" target="_blank" rel="noopener">NALSA की आधिकारिक वेबसाइट ↗</a></li><li>अपने राज्य की State Legal Services Authority या जिला विधिक सेवा प्राधिकरण (DLSA) की जानकारी खोजें।</li></ul>
+ <p>किसी अज्ञात व्यक्ति को कानूनी सहायता दिलाने के नाम पर पैसे या OTP न दें।</p>`},
+ cyber: {title:"ऑनलाइन धोखाधड़ी होने पर", tag:"तुरंत कदम", body:`
+ <ol><li>यदि पैसे की धोखाधड़ी हुई है, तो तुरंत 1930 पर कॉल करें और आधिकारिक राष्ट्रीय साइबर अपराध पोर्टल पर रिपोर्ट करें।</li><li>बैंक/पेमेंट सेवा को उनके आधिकारिक चैनल से सूचित करें।</li><li>ट्रांज़ैक्शन ID, संदेश और स्क्रीनशॉट सुरक्षित रखें।</li><li>OTP, PIN या पासवर्ड किसी को न बताएं; संदिग्ध लिंक न खोलें।</li></ol>
+ <p class="linklist"><a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener">राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल ↗</a></p>
+ <p>यह सामान्य जानकारी है। नुकसान की स्थिति में जल्द कार्रवाई करें; पैसे वापस मिलने की गारंटी नहीं होती।</p>`}
+};
+const home=document.getElementById('home'), detail=document.getElementById('detail'), detailContent=document.getElementById('detailContent'), searchResults=document.getElementById('searchResults');
+function showTopic(key){const t=topics[key]; if(!t)return; home.classList.add('hidden'); searchResults.classList.add('hidden'); detail.classList.remove('hidden'); detailContent.innerHTML=`<span class="pill">${t.tag}</span><h2>${t.title}</h2>${t.body}`; window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>showTopic(b.dataset.topic)));
+document.getElementById('backBtn').addEventListener('click',()=>{detail.classList.add('hidden');home.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});});
+function search(){const q=document.getElementById('searchInput').value.trim().toLowerCase(); detail.classList.add('hidden'); if(!q){home.classList.remove('hidden');searchResults.classList.add('hidden');return;}
+ const matches=[];
+ if(/फ्रॉड|धोखा|साइबर|online|fraud|1930|पैसे/.test(q))matches.push(['cyber','ऑनलाइन धोखाधड़ी पर कदम']);
+ if(/मुफ्त|वकील|कानूनी सहायता|legal aid|नालसा/.test(q))matches.push(['aid','मुफ्त कानूनी सहायता']);
+ if(/शिकायत|रिपोर्ट|आवेदन|complaint/.test(q))matches.push(['complaint','शिकायत करने से पहले']);
+ if(/अधिकार|कानून|धारा|rights|law/.test(q))matches.push(['rights','कानूनी अधिकार']);
+ home.classList.add('hidden');searchResults.classList.remove('hidden');
+ searchResults.innerHTML='<h2>खोज के नतीजे</h2>'+(matches.length?matches.map(([k,label])=>`<div class="result"><strong>${label}</strong><br><button data-open="${k}">जानकारी खोलें</button></div>`).join(''):'<p>इस शब्द के लिए अभी जानकारी नहीं मिली। “साइबर फ्रॉड”, “शिकायत” या “मुफ्त कानूनी सहायता” खोजकर देखें।</p>')+'<p><button class="back" id="searchBack">मुख्य पेज पर जाएँ</button></p>';
+ searchResults.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>showTopic(b.dataset.open)));
+ document.getElementById('searchBack').addEventListener('click',()=>{searchResults.classList.add('hidden');home.classList.remove('hidden');});
+}
+document.getElementById('searchBtn').addEventListener('click',search);
+document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')search();});
+</script>
+</body>
+</html>
